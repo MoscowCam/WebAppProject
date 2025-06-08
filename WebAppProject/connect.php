@@ -4,12 +4,12 @@ $connect = mysqli_connect(
     'db', #service name 
     'php_docker', #username
     'password', #password
-    'php_docker' #db table 
+    'php_docker' #db name 
 
 
 );
 
-$table_name = "tbl_teachers";
+$table_name = "tbl_teachers"; #table name
 
 $query = "SELECT * FROM $table_name";
 
@@ -24,3 +24,5 @@ while($i = mysqli_fetch_assoc($response))
     echo "<p>".$i['date']."</p>";
     echo "<hr>";
 }
+
+#hello masha 
