@@ -1,4 +1,4 @@
-version: '3' #docker version 
+#docker version 
 services:
   www:
 
