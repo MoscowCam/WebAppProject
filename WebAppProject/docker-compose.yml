@@ -1,4 +1,4 @@
-#docker version 
+version: "3" #docker version 
 services:
   www:
 
@@ -9,6 +9,7 @@ services:
     - 80:80
     - 443:443 # for future ssl traffic
   db:
+
     image: mysql:latest
     environment:
       - MYSQL_DATABASE=php_docker
