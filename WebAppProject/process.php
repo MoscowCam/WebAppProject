@@ -12,7 +12,7 @@ require_once('connect.php');
         $lastname       = $_POST['lastname'];
         $email          = $_POST['email'];
         $phonenumber    = $_POST['phonenumber'];
-        $password       = shal($_POST['password']);
+        $password       = sha1($_POST['password']);
 
             $query = "INSERT INTO users(firstname, lastname, email, phonenumber, password )
             VALUES(?,?,?,?,?)";
