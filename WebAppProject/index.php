@@ -8,7 +8,7 @@ require_once('connect.php');
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New User Registration</title>
+    <title>new User Registration</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
@@ -18,7 +18,7 @@ require_once('connect.php');
     
 
     <header>
-        <h1>New Staff Member Registration</h1>
+        <h1>new Staff Member Registration</h1>
     </header>
     
     <section>
@@ -31,17 +31,17 @@ require_once('connect.php');
                         <p>Fill out the form with correct information.</p>
                         <hr class="mb-3">
 
-                        <label for="firstName"><b>First Name:</b></label>
-                        <input class="form-control" type="text" id="firstName"name="firstName" required>
+                        <label for="firstname"><b>First name:</b></label>
+                        <input class="form-control" type="text" id="firstname"name="firstname" required>
                         
-                        <label for="lastName"><b>Last Name:</b></label>
-                        <input class="form-control" type="text" id="lastName" name="lastName" required>
+                        <label for="lastname"><b>Last name:</b></label>
+                        <input class="form-control" type="text" id="lastname" name="lastname" required>
 
                         <label for="email"><b>Email:</b></label>
                         <input class="form-control" type="email" id="email" name="email" required>
 
-                        <label for="phoneNumber"><b>Phone number:</b></label>
-                        <input class="form-control" type="text" id="phoneNumber" name="phoneNumber" required>
+                        <label for="phonenumber"><b>Phone number:</b></label>
+                        <input class="form-control" type="text" id="phonenumber" name="phonenumber" required>
 
                         <label for="password"><b>Password:</b></label>
                         <input class="form-control" type="password" id="password" name="password" required>
@@ -64,10 +64,10 @@ require_once('connect.php');
                 if(valid){
 
 
-                    var firstname    = $('#firstName').val();
-                    var lastname     = $('#lastName').val();
+                    var firstname    = $('#firstname').val();
+                    var lastname     = $('#lastname').val();
                     var email        = $('#email').val();
-                    var phonenumber  = $('#phoneNumber').val();
+                    var phonenumber  = $('#phonenumber').val();
                     var password     = $('#password').val();
 
 

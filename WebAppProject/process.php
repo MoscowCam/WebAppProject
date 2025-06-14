@@ -8,10 +8,10 @@ require_once('connect.php');
 
     if(isset($_POST)){
         
-        $firstname      = $_POST['firstName'];
-        $lastname       = $_POST['lastName'];
+        $firstname      = $_POST['firstname'];
+        $lastname       = $_POST['lastname'];
         $email          = $_POST['email'];
-        $phonenumber    = $_POST['phoneNumber'];
+        $phonenumber    = $_POST['phonenumber'];
         $password       = shal($_POST['password']);
 
             $query = "INSERT INTO users(firstname, lastname, email, phonenumber, password )
