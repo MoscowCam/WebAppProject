@@ -74,7 +74,7 @@ require_once('connect.php')
                         e.preventDefault();
 
                         $.ajax({
-                            type: 'POST',
+                            type:'POST',
                             url: 'process.php',
                             data:   {firstname: firstname, lastname: lastname, 
                                     email: email, phonenumber: phonenumber,
