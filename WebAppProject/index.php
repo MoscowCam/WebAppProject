@@ -82,7 +82,7 @@ require_once('connect.php');
                             success: function(data){
                                 Swal.fire({
                                     'title': 'Successful',
-                                    'text' : 'You registered successfully!',
+                                    'text' : data,
                                     'type' : 'success'
                                     })
                             },
