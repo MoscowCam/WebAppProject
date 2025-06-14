@@ -58,7 +58,9 @@ require_once('connect.php')
     <script type="text/javascript">
         $(function(){
             $('#register').click(function(e){
+
                 var valid = this.form.checkValidity();
+
                 if(valid){
 
 
@@ -69,29 +71,29 @@ require_once('connect.php')
                     var password     = $('#password').val();
 
 
-                    e.preventDefault();
+                        e.preventDefault();
 
-                    $.ajax({
-                        type: 'POST',
-                        url: 'process.php'
-                        data:   {firstname: firstname, lastname: lastname, 
-                                email: email, phonenumber: phonenumber,
-                                password: password}
-                        success: function(data){
-                             Swal.fire({
-                                'title': 'Successful',
-                                'text' : 'You registered successfully!',
-                                'type' : 'success'
-                                })
-                        },
-                        error: function(data){
-                             Swal.fire({
-                                'title': 'Error',
-                                'text' : 'There were errors during the registration process',
-                                'type' : 'error'
-                                })
-                        }
-                    });
+                        $.ajax({
+                            type: 'POST',
+                            url: './process.php'
+                            data:   {firstname: firstname, lastname: lastname, 
+                                    email: email, phonenumber: phonenumber,
+                                    password: password},
+                            success: function(data){
+                                Swal.fire({
+                                    'title': 'Successful',
+                                    'text' : 'You registered successfully!',
+                                    'type' : 'success'
+                                    })
+                            },
+                            error: function(data){
+                                Swal.fire({
+                                    'title': 'Error',
+                                    'text' : 'There were errors during the registration process',
+                                    'type' : 'error'
+                                    })
+                            }
+                        });
 
                     
                 }else{
