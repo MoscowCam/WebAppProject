@@ -84,7 +84,7 @@ require_once('connect.php');
                                     'title': 'Successful',
                                     'text' : data,
                                     'type' : 'success'
-                                    })
+                                    })  
                             },
                             error: function(data){
                                 Swal.fire({
