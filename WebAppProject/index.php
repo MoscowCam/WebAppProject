@@ -75,7 +75,7 @@ require_once('connect.php')
 
                         $.ajax({
                             type: 'POST',
-                            url: './process.php'
+                            url: 'process.php'
                             data:   {firstname: firstname, lastname: lastname, 
                                     email: email, phonenumber: phonenumber,
                                     password: password},

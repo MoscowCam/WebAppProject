@@ -5,7 +5,7 @@ require_once('connect.php')
 
 <?php
     if(isset($_POST)){
-        echo 'User submitted';
+        
         $firstName      = $_POST['firstName'];
         $lastName       = $_POST['lastName'];
         $email          = $_POST['email'];
