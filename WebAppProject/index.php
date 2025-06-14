@@ -67,7 +67,7 @@ require_once('connect.php')
                         <input class="form-control" type="password" id="password" name="password" required>
                         
                         <hr class="mb-3">
-                        <input class="btn btn-primary" type="submit" name="create" value="Sign up">
+                        <input class="btn btn-primary" type="submit" id="register" name="create" value="Sign up">
                     </div>
                 </div>
             </div>
@@ -77,10 +77,15 @@ require_once('connect.php')
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js "></script>
     <script type="text/javascript">
         $(function(){
-            Swal.fire({
-                'title': 'Hello'
+            #('#register').click(function(){
+                Swal.fire({
+                'title': 'Hello',
+                'text' : 'hello',
                 'type' : 'success'
-            })
+                })
+
+            });
+            
         })
     </script>
 
