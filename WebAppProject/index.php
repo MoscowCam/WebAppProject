@@ -12,7 +12,9 @@ require_once('connect.php')
     <link rel="stylesheet" href="./css/bootstrap.min.css">
 </head>
 <body>
+    <?php
 
+    ?>
     
 
     <header>
