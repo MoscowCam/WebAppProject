@@ -13,29 +13,7 @@ require_once('connect.php')
 </head>
 <body>
 
-    <?php
-    if(isset($_POST['create'])){
-        echo 'User submitted';
-        $firstName      = $_POST['firstName'];
-        $lastName       = $_POST['lastName'];
-        $email          = $_POST['email'];
-        $phoneNumber    = $_POST['phoneNumber'];
-        $password       = $_POST['password'];
-
-        $query = "INSERT INTO users(firstname, lastname, email, phonenumber, password )
-        VALUES(?,?,?,?,?)";
-        $stmtinsert = $connect->prepare($query);
-        $result = $stmtinsert->execute([$firstName, $lastName, $email, $phoneNumber, $password]);
-        if($result){
-            echo 'Successfully saved';
-        } else{
-            echo 'There were some errors!';
-        }
-        
-
-
-    }
-    ?>
+    
 
     <header>
         <h1>New Staff Member Registration</h1>
@@ -77,16 +55,54 @@ require_once('connect.php')
     <script src=" https://cdn.jsdelivr.net/npm/sweetalert2@11.22.0/dist/sweetalert2.all.min.js "></script>
     <script type="text/javascript">
         $(function(){
-            $('#register').click(function(){
-                Swal.fire({
-                'title': 'Hello',
-                'text' : 'hello',
-                'type' : 'success'
-                })
+            $('#register').click(function(e){
+                var valid = this.form.checkValidity();
+                if(valid){
+
+
+                    var firstname    = $('#firstName').val();
+                    var lastname     = $('#lastName').val();
+                    var email        = $('#email').val();
+                    var phonenumber  = $('#phoneNumber').val();
+                    var password     = $('#password').val();
+
+
+                    e.preventDefault();
+
+                    $.ajax({
+                        type: 'POST',
+                        url: 'process.php'
+                        data:   {firstname: firstname, lastname: lastname, 
+                                email: email, phonenumber: phonenumber,
+                                password: password}
+                        success: function(data){
+                             Swal.fire({
+                                'title': 'Successful',
+                                'text' : 'You registered successfully!',
+                                'type' : 'success'
+                                })
+                        },
+                        error: function(data){
+                             Swal.fire({
+                                'title': 'Error',
+                                'text' : 'There were errors during the registration process',
+                                'type' : 'error'
+                                })
+                        }
+                    });
+
+                    
+                }else{
+                    
+                }
+                
+
+
+               
 
             });
-            
-        })
+        });  
+        
     </script>
 
 
