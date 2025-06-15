@@ -2,7 +2,7 @@ body,html {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #603abc  !important;
+    background: #e3d9f9  !important;
 
 }
 
@@ -28,16 +28,58 @@ body,html {
     width: 170px;
     top: -75px;
     border-radius: 50%;
-    background-color: blue;
+    background-color: rgb(12, 2, 97);
     padding: 10px;
     text-align: center;
 
 }
 
 .brand_logo{
+  
+    overflow: hidden;
     height: 150px;
     width: 150px;
     border-radius: 50%;
     border: 2px solid white;
 
+}
+
+.form_container{
+    margin-top: 100px;
+}
+
+.login_btn{
+    width: 100%;
+    background: rgb(12, 2, 97) !important;
+    color: white !important;
+
+}
+
+.login_btn:focus{
+    box-shadow: none !important;
+    outline: 0px !important;
+
+}
+
+.login_container{
+    padding: 0 2rem;
+}
+
+.input-group-text{
+    background: rgb(12, 2, 97) !important;
+    color: white !important;
+    border: 0 !important;
+    border-radius: 0.25rem 0 0 0.25rem !important;
+}
+
+.input_user,
+.input_pass{
+    height: 28px;
+}
+
+
+.input_user,
+.input_pass:focus{
+    box-shadow: none !important;
+    outline: 0px !important;
 }
