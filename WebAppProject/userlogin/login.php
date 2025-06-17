@@ -40,12 +40,13 @@
                             </div>
 
                         </div>
-                    </form>
+                    
 
                 </div>
-                <div class="d-flex justify-content-center mb-3 login-container">
+                <div class="d-flex justify-content-center mb-3 login_container">
                     <button type="button" name="button" id="login" class="btn login_btn">Login</button>
                 </div>
+                </form>
                 <div class="mt-4">
                     <div class="d-flex justify-content-center links">
                         Don't have an account? <a href="../index.php" class="ml-2">Sign up</a>
@@ -66,6 +67,33 @@
 
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    
+    <script>
+        $(function(){
+            $('#login').click(function(e){
+                var valid = this.form.checkValidity();
+
+                if(valid){
+                    var username = $('#username').val();
+                    var password = $('#password').val();
+
+                }
+                e.preventDefault();
+                
+                $.ajax({
+                    type: 'POST',
+                    url: 'jslogin.php',
+                    data: {username: username, password: password},
+                    success: function(data){
+                        alert(data);
+                    },
+                    error: function(data){
+                        alert('there were errors while logging in');
+                    }
+                });
+
+
+            });
+        });
+    </script>
 </body>
 </html>
